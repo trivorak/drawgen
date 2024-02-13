@@ -13,8 +13,7 @@ SCALE = 10
 
 def browseFiles():
     global selectedFile, actualFileName
-    filename = filedialog.askopenfilename(initialdir="~/", title="Select a File",
-                                          filetypes=(("all files", "*.*"), ("PNG Files", "*.png*")))
+    filename = filedialog.askopenfilename(initialdir="~/", title="Select a File")
     selectedFile = filename
     actualFileName = '"' + os.path.splitext(os.path.basename(selectedFile))[0] + '"'
     if selectedFile == "":
